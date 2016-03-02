@@ -6,7 +6,7 @@
 #    By: getrembl <getrembl@student.42.fr>          +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2016/02/10 00:12:59 by getrembl          #+#    #+#              #
-#    Updated: 2016/02/10 01:31:10 by karakhirn        ###   ########.fr        #
+#    Updated: 2016/02/29 17:45:39 by getrembl         ###   ########.fr        #
 #                                                                              #
 #******************************************************************************#
 
@@ -14,7 +14,7 @@ NAME				= ft_select
 SRC					= ft_select.c
 OBJ					= $(SRC:.c=.o)
 CC					= /usr/bin/gcc
-CFLAGS				= -Wall -Wextra -Werror
+CFLAGS				= -Wall -Wextra -Werror -lncurses
 CDEBUG				= -Wall -Wextra -Werror -ansi -pedantic -g
 RM					= /bin/rm -f
 ECHO				= /bin/echo -e
