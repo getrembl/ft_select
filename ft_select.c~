@@ -6,7 +6,7 @@
 /*   By: getrembl <getrembl@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2016/02/10 00:32:21 by getrembl          #+#    #+#             */
-/*   Updated: 2016/03/21 18:17:21 by getrembl         ###   ########.fr       */
+/*   Updated: 2016/03/02 18:42:22 by getrembl         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -23,8 +23,6 @@ int					main(int argc, char *argv[], char *env[])
 	char			*term;
 	struct termios	term_struct;
 
-	if (!argc || !argv[1])
-		return (-1);
 	if ((term = getenv("TERM")) == NULL)
 		return (-1);
 	if (tgetent(NULL, term) == ERR)
@@ -37,6 +35,5 @@ int					main(int argc, char *argv[], char *env[])
 	term_struct.cc[VTIME] = 0;
 	if (tcsetattr(0, TCSADRAIN, &term_struct) == -1)
 		return (-1);
-
 	return (0);
 }
