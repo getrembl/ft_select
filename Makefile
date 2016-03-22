@@ -6,7 +6,7 @@
 #    By: getrembl <getrembl@student.42.fr>          +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2016/02/10 00:12:59 by getrembl          #+#    #+#              #
-#    Updated: 2016/03/08 11:13:24 by getrembl         ###   ########.fr        #
+#    Updated: 2016/03/22 16:13:35 by getrembl         ###   ########.fr        #
 #                                                                              #
 #******************************************************************************#
 
@@ -18,14 +18,14 @@ CFLAGS				= -Wall -Wextra -Werror
 CDEBUG				= -Wall -Wextra -Werror -ansi -pedantic -g
 RM					= /bin/rm -f
 ECHO				= /bin/echo -e
-LIBFT_MAKE			= ./libft/make
+LIBFT_MAKE			= cd ./libft && make 
+
+all		:			$(NAME)
 
 $(NAME)	:			$(OBJ)
 						@$(LIBFT_MAKE)
-						@$(CC) $(CFLAGS) -o $(NAME) $(OBJ) libft.a
+						@$(CC) $(CFLAGS) -o $(NAME) $(OBJ) ./libft/libft.a
 						@$(ECHO) '> Compiled'
-
-all		:			$(NAME)
 
 clean	:
 						@$(LIBFT_MAKE) clean
@@ -45,4 +45,4 @@ debug	:			$(OBJ)
 						@$(CC) $(CDEBUG) -o $(NAME) $(OBJ)
 						@$(ECHO) '> Mode Debug: done'
 
-.PHONY	:			all clean fclean re
+.PHONY	:			all clean fclean re %.o
