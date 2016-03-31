@@ -6,7 +6,7 @@
 /*   By: getrembl <getrembl@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2016/02/10 00:32:21 by getrembl          #+#    #+#             */
-/*   Updated: 2016/03/31 15:28:49 by getrembl         ###   ########.fr       */
+/*   Updated: 2016/03/22 15:50:03 by getrembl         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -35,14 +35,6 @@ int					seeTouch()
 		}
 	}
 	return (0);
-}
-
-int					ft_select()
-{
-	char			*buffer[3];
-
-
-	while (read(0, buffer, 3) != EOL)
 }
 
 int					main(int argc, char *argv[], char *env[])
